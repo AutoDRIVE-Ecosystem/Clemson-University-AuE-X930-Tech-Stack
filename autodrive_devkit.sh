@@ -61,6 +61,12 @@ echo "x11vnc-server: started (connect to VNC on port 5900)"
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml > /var/log/foxglove.log 2>&1 &
 echo "foxglove-bridge: started (connect to Foxglove on port 8765)"
 
+# Launch AutoDRIVE Devkit with RViz configuration
+# ros2 run rviz2 rviz2 -d $(ros2 pkg prefix autodrive_neoracer)/share/autodrive_neoracer/rviz/vehicle.rviz
+# ros2 run rviz2 rviz2 -d $(ros2 pkg prefix autodrive_neoracer)/share/autodrive_neoracer/rviz/sensors.rviz
+# ros2 run rviz2 rviz2 -d $(ros2 pkg prefix autodrive_neoracer)/share/autodrive_neoracer/rviz/mapping.rviz
+# ros2 run rviz2 rviz2 -d $(ros2 pkg prefix autodrive_neoracer)/share/autodrive_neoracer/rviz/navigation.rviz
+
 # Announce that the AutoDRIVE Devkit is ready
 sleep 2
 echo "AutoDRIVE Devkit for NeoRacer is ready."
