@@ -11,7 +11,7 @@
 [![API Docker Pulls](https://badgen.net/docker/pulls/autodriveecosystem/autodrive_neoracer_api?icon=docker&label=api%20pulls)](https://hub.docker.com/r/autodriveecosystem/autodrive_neoracer_api/)
 
 > [!NOTE]
-> - The setup has been tested on the [Ubuntu](https://ubuntu.com) operating system. It works with known limitations on WSL.
+> - The setup has been extensively tested on [Ubuntu](https://ubuntu.com). Additionally, it has been tested to work on [Windows (WSL)](https://learn.microsoft.com/en-us/windows/wsl) and [macOS](https://www.apple.com/os/macos), with known limitations.
 > - It is assumed that [Docker](https://docs.docker.com/engine/install) is installed.
 > - It is assumed that if the Docker container is to take advantage of an NVIDIA GPU, the host machine has been properly configured by installing the necessary NVIDIA GPU drivers and the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html).
 
