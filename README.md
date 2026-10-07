@@ -14,6 +14,7 @@
 > - The setup has been extensively tested on [Ubuntu](https://ubuntu.com). Additionally, it has been tested to work on [Windows (WSL)](https://learn.microsoft.com/en-us/windows/wsl) and [macOS](https://www.apple.com/os/macos), with known limitations.
 > - It is assumed that [Docker](https://docs.docker.com/engine/install) is installed.
 > - It is assumed that if the Docker container is to take advantage of an NVIDIA GPU, the host machine has been properly configured by installing the necessary NVIDIA GPU drivers and the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html).
+> - We have worked with the [ACDS team (RCDE group at CCIT)](https://www.clemson.edu/ccit/research/service-areas/acds.html) to set up a Classroom OnDemand resource within the [Palmetto 2 Cluster](https://docs.rcd.clemson.edu/palmetto/about) to conveniently launch a desktop session for the class via a preconfigured environment (as an alternative to your own laptops if you are facing technical issues/limitations).
 
 ## AutoDRIVE Simulator Container
 
