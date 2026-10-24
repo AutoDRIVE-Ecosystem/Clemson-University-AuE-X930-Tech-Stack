@@ -72,6 +72,10 @@ import queue # FIFO queue
 # - The ESP32-S3 on the physical twin closes the speed control loop, while
 # this node uses feedforward + feedback (PID) control on measured speed to
 # reproduce the physical twin's closed-loop behavior.
+# - /drive expects speed command for the vehicle to be normalized [-1.0, 1.0].
+# The actuation limits of the vehicle `speed` are ±6 m/s (safety cap). Positive
+# command corresponds to forward vehicle motion, while negative command corresponds
+# to reverse vehicle motion.
 #
 # Steering:
 # - Firmware maps +/-30 degrees steering across the full servo pulse swing.
