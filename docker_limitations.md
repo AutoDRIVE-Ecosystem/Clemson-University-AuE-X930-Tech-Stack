@@ -12,3 +12,5 @@
 2. There is a known Docker issue on macOS that prevents RViz from rendering via containers. We suggest using [Foxglove](https://foxglove.dev/download) as an alternative data visualization tool to circumvent this constraint.
 
 3. Some non-native Linux environments (e.g., WSL) do not allow host IPv4 network sharing with Docker containers. This would prevent users from using the AutoDRIVE Simulator (or AutoDRIVE Testbed via hardware-in-the-loop setup) and AutoDRIVE Devkit on two separate computing nodes (e.g., two different PCs) connected via a common network (wired or wireless). We suggest using a single compute node or a native Linux installation to circumvent this constraint.
+
+4. Some non-native Linux environments (e.g., WSL) block network ports for Docker containers. We suggest explicitly forcing the port requests using `-p 4567:4567 -p 8080-8087:8080-8087 -p 8888:8888 -p 3000:3000 -p 5900:5900 -p 8765:8765` arguments instead of using host network/IPC arguments `--network=host --ipc=host` when executing the container with `docker run` command.
