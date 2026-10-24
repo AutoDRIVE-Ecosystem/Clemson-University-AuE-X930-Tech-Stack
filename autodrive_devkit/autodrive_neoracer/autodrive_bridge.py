@@ -86,6 +86,10 @@ import queue # FIFO queue
 # - A 0.625 ms (625 us) servo pulse swing is the maximum pulse-width deviation
 # from center used to command full travel in either direction.
 # - Steering command = 1.0 <==> /motor = 0.625 <==> wheels at 30 deg lock
+# - /drive expects steering_angle command for the vehicle to be normalized
+# [-1.0, 1.0]. The actuation limits of the vehicle steering_angle are ±0.5236 rad
+# (30°). Positive command corresponds to left-hand turn, while negative command
+# corresponds to right-hand turn.
 #
 # Odometry:
 # - /odom twist.angular is intentionally zero, matching neoracer_ros2_driver's
