@@ -68,7 +68,7 @@ import queue # FIFO queue
 #########################################################
 
 # Speed:
-# - /motor speed matches neoracer_ros2_driver with a range of +/-6 m/s.
+# - /motor speed matches neoracer_ros2_driver with a range of ±6 m/s.
 # - The ESP32-S3 on the physical twin closes the speed control loop, while
 # this node uses feedforward + feedback (PID) control on measured speed to
 # reproduce the physical twin's closed-loop behavior.
@@ -78,8 +78,8 @@ import queue # FIFO queue
 # to reverse vehicle motion.
 #
 # Steering:
-# - Firmware maps +/-30 degrees steering across the full servo pulse swing.
-# - The steering linkage reaches +/-30 deg wheel lock at only 0.625 of the
+# - Firmware maps ±30 degrees steering across the full servo pulse swing.
+# - The steering linkage reaches ±30 deg wheel lock at only 0.625 of the
 # full servo pulse swing. This makes the wire-to-wheel gain 1 / 0.625 = 1.6.
 # - /motor steer is capped at 0.625 so the servo cannot drive past the
 # mechanical steering linkage limit.
