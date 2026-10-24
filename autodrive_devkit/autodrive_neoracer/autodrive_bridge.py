@@ -78,14 +78,14 @@ import queue # FIFO queue
 # to reverse vehicle motion.
 #
 # Steering:
-# - Firmware maps ±30 degrees steering across the full servo pulse swing.
-# - The steering linkage reaches ±30 deg wheel lock at only 0.625 of the
+# - Firmware maps ±30° steering across the full servo pulse swing.
+# - The steering linkage reaches ±30° wheel lock at only 0.625 of the
 # full servo pulse swing. This makes the wire-to-wheel gain 1 / 0.625 = 1.6.
 # - /motor steer is capped at 0.625 so the servo cannot drive past the
 # mechanical steering linkage limit.
 # - A 0.625 ms (625 us) servo pulse swing is the maximum pulse-width deviation
 # from center used to command full travel in either direction.
-# - Steering command = 1.0 <==> /motor = 0.625 <==> wheels at 30 deg lock
+# - Steering command = 1.0 <==> /motor = 0.625 <==> wheels at 30° lock
 # - /drive expects steering_angle command for the vehicle to be normalized
 # [-1.0, 1.0]. The actuation limits of the vehicle steering_angle are ±0.5236 rad
 # (30°). Positive command corresponds to left-hand turn, while negative command
@@ -103,11 +103,11 @@ import queue # FIFO queue
 # - RGB image with 640x480 pixel resolution.
 #
 # LIDAR:
-# - /scan contains a full circle (360 deg) range measurements spanning -180 to 180 deg
-# at 0.25 deg resolution, represented as a 1440-bin array of float32 distances in meters
+# - /scan contains a full circle (360°) range measurements spanning -180° to 180°
+# at 0.25° resolution, represented as a 1440-bin array of float32 distances in meters
 # matching neoracer_ros2_driver.
 # - /scan ranges index 0 points straight behind, and the subsequent elements progress
-# counter-clockwise. Only the 270 deg window (|angle| <= 135°) carries returns;
+# counter-clockwise. Only the 270° window (|angle| <= 135°) carries returns;
 # no-return = inf. The rear sector (between 135° and 225°) is blind; returns inf.
 # - racecar-neo's scan is represented as a 1440-bin array of float32 distances in
 # centimeters, index 0 points straight ahead, and the subsequent elements progress
