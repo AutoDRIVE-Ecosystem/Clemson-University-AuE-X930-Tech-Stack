@@ -90,6 +90,8 @@ import queue # FIFO queue
 # [-1.0, 1.0]. The actuation limits of the vehicle steering_angle are ±0.5236 rad
 # (30°). Positive command corresponds to left-hand turn, while negative command
 # corresponds to right-hand turn.
+# - racecar-neo's convention is inverted with positive steering command corresponding
+# to a right-hand turn. This inversion is handled by drive_real.py file.
 #
 # Odometry:
 # - /odom twist.angular is intentionally zero, matching neoracer_ros2_driver's
